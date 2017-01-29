@@ -1,4 +1,5 @@
 import os
+import datetime
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -10,5 +11,4 @@ SECRET_KEY = "nxkvndicms34cnhynecnwmn41"
 
 JWT_AUTH_URL_RULE = "/api/login"
 JWT_AUTH_ENDPOINT = "login"
-JWT_EXPIRATION_DELTA = 3600    #3600 sec
-JWT_DEFAULT_REALM = "cos"
+JWT_EXPIRATION_DELTA = datetime.timedelta(seconds=3600)
