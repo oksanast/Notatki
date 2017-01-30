@@ -25,4 +25,3 @@ def register():
 
 def identity(payload):
     return User.query.filter_by(id=payload['identity']).first()
-

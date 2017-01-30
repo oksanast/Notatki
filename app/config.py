@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 import os
 import datetime
 
@@ -12,3 +13,4 @@ SECRET_KEY = "nxkvndicms34cnhynecnwmn41"
 JWT_AUTH_URL_RULE = "/api/login"
 JWT_AUTH_ENDPOINT = "login"
 JWT_EXPIRATION_DELTA = datetime.timedelta(seconds=3600)
+#Authorization Header must be: "JWT [token]"

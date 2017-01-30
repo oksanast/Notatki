@@ -10,8 +10,6 @@ class User(db.Model):
     username = db.Column(db.String(128), nullable=False, unique=True)
     password = db.Column(db.String(128), nullable=False)
 
-    categories = db.relationship('NoteCategory', backref='user', lazy='dynamic')
-
     def __init__(self, username, password):
         self.username = username
         self.password = password
