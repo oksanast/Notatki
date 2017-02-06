@@ -24,7 +24,7 @@ def postNote():
         note = Note(data['title'], data['content'], data['category'], data['tag'], current_identity.id)
         db.session.add(note)
         db.session.commit()
-        print(data['tag'])
+        # print(data['tag'])
         return jsonify(message="The note was created", note=note.serialize()), 201
     return jsonify(message="The note has empty fields"), 400
 

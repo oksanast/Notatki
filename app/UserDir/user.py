@@ -1,9 +1,10 @@
-from flask_jwt import JWT
+import datetime
+import jwt
 from sqlalchemy.exc import IntegrityError
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask import Blueprint, request, jsonify
 from app.UserDir.c_user import User
-from app import app, db
+from app import db
 
 mod_auth = Blueprint('auth', __name__, url_prefix='/api')
 

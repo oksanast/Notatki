@@ -1,10 +1,14 @@
+# Created by Oksana St.
+# github.com/oksanast/Notatki
+
 from flask import Flask, jsonify
+from flask_cors import CORS
 from flask_jwt import JWT
 from flask_sqlalchemy import SQLAlchemy
-
 from app import config
 
 app = Flask(__name__)
+CORS(app)
 app.config.from_object('config')
 db = SQLAlchemy(app)
 

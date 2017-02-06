@@ -12,5 +12,5 @@ SECRET_KEY = "nxkvndicms34cnhynecnwmn41"
 
 JWT_AUTH_URL_RULE = "/api/login"
 JWT_AUTH_ENDPOINT = "login"
-JWT_EXPIRATION_DELTA = datetime.timedelta(seconds=3600)
+JWT_EXPIRATION_DELTA = datetime.timedelta(days=4)
 #Authorization Header must be: "JWT [token]"
